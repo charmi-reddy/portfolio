@@ -342,7 +342,31 @@ const apps = {
                             </ul>
                         </div>
                     </div>
-
+                    <div class="project-card group">
+                        <div class="relative z-10">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Meeting Summarizer</h3>
+                                <a href="https://github.com/charmi-reddy/meeting-summarizer" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">HTML</span>
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">CSS</span>
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">JAVASCRIPT</span>
+                            </div>
+                            <ul class="space-y-3 text-purple-300/70">
+                                <li class="flex gap-3">
+                                    <span class="text-purple-500 mt-1">•</span>
+                                    <span>Built a responsive academic utility used by 200+ students, reducing manual grade calculation time by 95%.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-purple-500 mt-1">•</span>
+                                    <span>Implemented client-side validation and edge-case handling, eliminating 90% of common user input errors.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="project-card group">
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
