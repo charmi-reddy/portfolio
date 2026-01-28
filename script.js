@@ -424,7 +424,7 @@ const apps = {
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">SGPA to CGPA Calculator</h3>
-                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <a href="https://sgpa-to-cgpa-calculator.netlify.app/" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="external-link" class="w-5 h-5"></i>
                                 </a>
                             </div>
