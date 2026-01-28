@@ -313,7 +313,7 @@ const apps = {
         content: () => `
             <div class="content-section spine py-24 px-6 space-y-16">
                 <header class="space-y-6">
-                    <h2 class="text-5xl text-white font-bold tracking-tighter">Featured Projects</h2>
+                    <h2 class="text-5xl text-white font-bold tracking-tighter">Projects</h2>
                     <div class="h-px w-full bg-purple-900/20"></div>
                 </header>
 
