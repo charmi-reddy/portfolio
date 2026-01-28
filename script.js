@@ -196,7 +196,9 @@ const apps = {
                     </button>
                 </section>
 
-<footer class="pt-20 border-t border-purple-900/20 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] mono uppercase tracking-[0.2em] text-purple-900"> <span>© 2026 / ALL RIGHTS RESERVED</span> <span>Made with 💗 by P Charmi Reddy.</span> </footer>
+<footer class="pt-20 border-t border-purple-900/20 flex justify-center items-center text-[10px] mono uppercase tracking-[0.2em] text-purple-900">
+  <span>Made with 💗 by P Charmi Reddy.</span>
+</footer>
                 
                 ${getNavButtons('home')}
             </div>
