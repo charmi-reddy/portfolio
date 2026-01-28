@@ -1,4 +1,4 @@
-// State
+prom// State
 const state = {
     activeTab: 'home',
     tabs: ['home'],
@@ -346,8 +346,8 @@ const apps = {
                     <div class="project-card group">
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Prompt Improver</h3>
-                                <a href="https://github.com/charmi-reddy/prompt-improver" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Meeting Summarizer</h3>
+                                <a href="https://github.com/charmi-reddy/meeting-summarizer" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="github" class="w-5 h-5"></i>
                                 </a>
                             </div>
@@ -358,11 +358,11 @@ const apps = {
                             <ul class="space-y-3 text-purple-300/70">
                                 <li class="flex gap-3">
                                     <span class="text-purple-500 mt-1">•</span>
-                                    <span>Built a meta-AI system that rewrites prompts to improve LLM response coherence and intent alignment.</span>
+                                    <span>Built an NLP-driven pipeline that transforms raw meeting transcripts into structured, human-readable summaries by extracting key topics, decisions, and action items.</span>
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-purple-500 mt-1">•</span>
-                                    <span>Increased output relevance across 50+ prompt variants by systematically reducing ambiguity and noise.</span>
+                                    <span>Demonstrates practical applied NLP by turning unstructured conversation data into clear knowledge artifacts, bridging real-world language with machine understanding.</span>
                                 </li>
                             </ul>
                         </div>
