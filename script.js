@@ -1,4 +1,4 @@
-prom// State
+// State
 const state = {
     activeTab: 'home',
     tabs: ['home'],
