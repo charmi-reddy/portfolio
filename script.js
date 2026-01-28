@@ -471,28 +471,28 @@ const apps = {
                             <i data-lucide="mail" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">Email</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">your.email@example.com</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">pcharmireddy@gmail.com</span>
                     </a>
                     <a href="https://github.com/charmi-reddy" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
                             <i data-lucide="github" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">GitHub</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">github.com/yourusername</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">github.com/charmi-reddy</span>
                     </a>
                     <a href="https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
                             <i data-lucide="linkedin" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">LinkedIn</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">linkedin.com/in/yourprofile</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">linkedin.com/in/charmi-reddy-p-b2aaa2294</span>
                     </a>
                     <a href="https://twitter.com/PCharmiReddy" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
                             <i data-lucide="twitter" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">Twitter / X</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">@yourusername</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">@PCharmiReddy</span>
                     </a>
                 </div>
                 
