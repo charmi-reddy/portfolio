@@ -373,7 +373,7 @@ const apps = {
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Resume Checker</h3>
                                 <a href="https://github.com/charmi-reddy/Resume-Checker" class="text-purple-500 hover:text-purple-400 transition-colors">
-                                    <i data-lucide="external-link" class="w-5 h-5"></i>
+                                    <i data-lucide="github" class="w-5 h-5"></i>
                                 </a>
                             </div>
                             <div class="flex gap-2 mb-4">
