@@ -358,11 +358,11 @@ const apps = {
                             <ul class="space-y-3 text-purple-300/70">
                                 <li class="flex gap-3">
                                     <span class="text-purple-500 mt-1">•</span>
-                                    <span>Built an NLP-driven pipeline that transforms raw meeting transcripts into structured, human-readable summaries by extracting key topics, decisions, and action items.</span>
+                                    <span>Used NLP to convert raw meeting transcripts into clear, structured summaries.</span>
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-purple-500 mt-1">•</span>
-                                    <span>Demonstrates practical applied NLP by turning unstructured conversation data into clear knowledge artifacts, bridging real-world language with machine understanding.</span>
+                                    <span>Bridged unstructured human speech with machine understanding for real-world use.</span>
                                 </li>
                             </ul>
                         </div>
