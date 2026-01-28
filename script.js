@@ -142,7 +142,7 @@ const apps = {
                     <div class="space-y-4">
                         <span class="text-[10px] mono uppercase tracking-[0.5em] text-purple-800">AI/ML Developer</span>
                         <h1 class="text-6xl md:text-[8rem] font-bold tracking-tighter text-white leading-[0.85]">
-                            YOUR<br/><span class="text-purple-500">NAME.</span>
+                            P CHARMI<br/><span class="text-purple-500">REDDY.</span>
                         </h1>
                     </div>
                     <p class="text-xl md:text-2xl text-purple-300/60 font-light leading-tight max-w-xl tracking-tight">
