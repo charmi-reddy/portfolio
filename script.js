@@ -57,17 +57,18 @@ function initNeuralNetwork() {
         }
         
         draw() {
-            // Save context and translate to particle position
+            // Outer glow using cached gradient
             ctx.save();
             ctx.translate(this.x, this.y);
-            
-            // Outer glow using cached gradient
             ctx.beginPath();
             ctx.arc(0, 0, this.radius + 3, 0, Math.PI * 2);
             ctx.fillStyle = this.glowGradient;
             ctx.fill();
+            ctx.restore();
             
             // Inner particle
+            ctx.save();
+            ctx.translate(this.x, this.y);
             ctx.beginPath();
             ctx.arc(0, 0, this.radius, 0, Math.PI * 2);
             ctx.fillStyle = '#a855f7';
@@ -75,7 +76,6 @@ function initNeuralNetwork() {
             ctx.shadowBlur = 15;
             ctx.fill();
             ctx.shadowBlur = 0;
-            
             ctx.restore();
         }
     }
