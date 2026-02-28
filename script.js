@@ -16,6 +16,23 @@ function initNeuralNetwork() {
     const particleCount = 120;
     const connectionDistance = 200;
     
+    // Function to create clipping path that excludes the mac-window area
+    function createClippingPath() {
+        const macWindow = document.querySelector('.mac-window');
+        if (!macWindow) return;
+        
+        const rect = macWindow.getBoundingClientRect();
+        
+        // Create a path that covers the entire canvas except the window area
+        ctx.save();
+        ctx.beginPath();
+        // Outer rectangle (entire canvas)
+        ctx.rect(0, 0, canvas.width, canvas.height);
+        // Inner rectangle (window area) - this creates a "hole"
+        ctx.rect(rect.left, rect.top, rect.width, rect.height);
+        ctx.clip('evenodd'); // Use even-odd rule to create the hole
+    }
+    
     class Particle {
         constructor() {
             this.x = Math.random() * canvas.width;
@@ -83,12 +100,18 @@ function initNeuralNetwork() {
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
+        // Apply clipping path to exclude window area
+        createClippingPath();
+        
         particles.forEach(particle => {
             particle.update();
             particle.draw();
         });
         
         drawConnections();
+        
+        // Restore context to remove clipping
+        ctx.restore();
         
         requestAnimationFrame(animate);
     }
