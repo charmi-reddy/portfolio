@@ -195,8 +195,7 @@ const apps = {
 
                 <footer class="pt-20 border-t border-purple-900/20 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] mono uppercase tracking-[0.2em] text-purple-900">
                     <span>© 2026 ALL RIGHTS RESERVED.</span>
-                </footer>
-                
+                </footer>            
                 ${getNavButtons('home').html}
             </div>
         `
@@ -244,8 +243,7 @@ const apps = {
                 </div>
                 
                 ${getNavButtons('about').html}
-            </div>
-        `
+            </div>     `
     },
     techstack: {
         name: 'Tech Stack',
