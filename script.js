@@ -40,6 +40,12 @@ function initNeuralNetwork() {
             this.vx = (Math.random() - 0.5) * 0.8;
             this.vy = (Math.random() - 0.5) * 0.8;
             this.radius = Math.random() * 2.5 + 1.5;
+            
+            // Cache gradients - create once instead of every frame
+            this.glowGradient = ctx.createRadialGradient(0, 0, 0, 0, 0, this.radius + 3);
+            this.glowGradient.addColorStop(0, 'rgba(168, 85, 247, 0.9)');
+            this.glowGradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.4)');
+            this.glowGradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
         }
         
         update() {
@@ -51,22 +57,26 @@ function initNeuralNetwork() {
         }
         
         draw() {
-            // Outer glow
+            // Save context and translate to particle position
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            
+            // Outer glow using cached gradient
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius + 3, 0, Math.PI * 2);
-            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius + 3);
-            gradient.addColorStop(0, 'rgba(168, 85, 247, 0.9)');
-            gradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.4)');
-            gradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
-            ctx.fillStyle = gradient;
+            ctx.arc(0, 0, this.radius + 3, 0, Math.PI * 2);
+            ctx.fillStyle = this.glowGradient;
             ctx.fill();
+            
+            // Inner particle
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.arc(0, 0, this.radius, 0, Math.PI * 2);
             ctx.fillStyle = '#a855f7';
             ctx.shadowColor = '#a855f7';
             ctx.shadowBlur = 15;
             ctx.fill();
             ctx.shadowBlur = 0;
+            
+            ctx.restore();
         }
     }
     
