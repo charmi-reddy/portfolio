@@ -628,6 +628,7 @@ footer {
 }
 
 .nav-arrow-btn span {
+    color: #ffffff;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
     font-weight: bold;
 }

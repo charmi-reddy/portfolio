@@ -115,13 +115,13 @@ function getNavButtons(currentTab) {
             <div class="fixed-nav-arrows">
                 ${prevTab ? `
                     <button onclick="openTab('${prevTab}')" class="nav-arrow-btn nav-arrow-left group">
-                        <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&lt;</span>
+                        <span class="text-3xl">&lt;</span>
                     </button>
                 ` : ''}
                 
                 ${nextTab ? `
                     <button onclick="openTab('${nextTab}')" class="nav-arrow-btn nav-arrow-right group">
-                        <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&gt;</span>
+                        <span class="text-3xl">&gt;</span>
                     </button>
                 ` : ''}
             </div>
