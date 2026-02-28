@@ -109,21 +109,24 @@ function getNavButtons(currentTab) {
     const prevTab = currentIndex > 0 ? navOrder[currentIndex - 1] : null;
     const nextTab = currentIndex < navOrder.length - 1 ? navOrder[currentIndex + 1] : null;
     
-    return `
-        <div class="fixed-nav-arrows">
-            ${prevTab ? `
-                <button onclick="openTab('${prevTab}')" class="nav-arrow-btn nav-arrow-left group">
-                    <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&lt;</span>
-                </button>
-            ` : ''}
-            
-            ${nextTab ? `
-                <button onclick="openTab('${nextTab}')" class="nav-arrow-btn nav-arrow-right group">
-                    <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&gt;</span>
-                </button>
-            ` : ''}
-        </div>
-    `;
+    return {
+        html: '',
+        arrows: `
+            <div class="fixed-nav-arrows">
+                ${prevTab ? `
+                    <button onclick="openTab('${prevTab}')" class="nav-arrow-btn nav-arrow-left group">
+                        <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&lt;</span>
+                    </button>
+                ` : ''}
+                
+                ${nextTab ? `
+                    <button onclick="openTab('${nextTab}')" class="nav-arrow-btn nav-arrow-right group">
+                        <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&gt;</span>
+                    </button>
+                ` : ''}
+            </div>
+        `
+    };
 }
 
 const apps = {
@@ -195,7 +198,7 @@ const apps = {
                     <span>© 2024 / ALL RIGHTS RESERVED</span>
                 </footer>
                 
-                ${getNavButtons('home')}
+                ${getNavButtons('home').html}
             </div>
         `
     },
@@ -241,7 +244,7 @@ const apps = {
                     </div>
                 </div>
                 
-                ${getNavButtons('about')}
+                ${getNavButtons('about').html}
             </div>
         `
     },
@@ -297,7 +300,7 @@ const apps = {
                     </div>
                 </div>
                 
-                ${getNavButtons('techstack')}
+                ${getNavButtons('techstack').html}
             </div>
         `
     },
@@ -416,7 +419,7 @@ const apps = {
                     </div>
                 </div>
                 
-                ${getNavButtons('projects')}
+                ${getNavButtons('projects').html}
             </div>
         `
     },
@@ -464,7 +467,7 @@ const apps = {
                     </a>
                 </div>
                 
-                ${getNavButtons('contact')}
+                ${getNavButtons('contact').html}
             </div>
         `
     }
@@ -503,8 +506,12 @@ function renderTabs() {
 
 function renderContent() {
     const contentArea = document.getElementById('contentArea');
+    const navArrows = document.getElementById('navArrows');
     const app = apps[state.activeTab];
+    const navData = getNavButtons(state.activeTab);
+    
     contentArea.innerHTML = app.content();
+    navArrows.innerHTML = navData.arrows;
     
     // Scroll to top when content changes
     contentArea.scrollTop = 0;
