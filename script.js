@@ -100,6 +100,7 @@ function initNeuralNetwork() {
     });
 }
 
+// Navigation order
 const navOrder = ['home', 'about', 'techstack', 'projects', 'contact'];
 
 function getNavButtons(currentTab) {
@@ -190,9 +191,10 @@ const apps = {
                     </button>
                 </section>
 
-<footer class="pt-20 border-t border-purple-900/20 flex justify-center items-center text-[10px] mono uppercase tracking-[0.2em] text-purple-900">
-  <span>Made with 💗 by P Charmi Reddy.</span>
-</footer>
+                <footer class="pt-20 border-t border-purple-900/20 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] mono uppercase tracking-[0.2em] text-purple-900">
+                    <span>AI_ML_PORTFOLIO_2024</span>
+                    <span>© 2024 / ALL RIGHTS RESERVED</span>
+                </footer>
                 
                 ${getNavButtons('home')}
             </div>
@@ -306,7 +308,7 @@ const apps = {
         content: () => `
             <div class="content-section spine py-24 px-6 space-y-16">
                 <header class="space-y-6">
-                    <h2 class="text-5xl text-white font-bold tracking-tighter">Projects</h2>
+                    <h2 class="text-5xl text-white font-bold tracking-tighter">Featured Projects</h2>
                     <div class="h-px w-full bg-purple-900/20"></div>
                 </header>
 
@@ -315,7 +317,7 @@ const apps = {
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Prompt Improver</h3>
-                                <a href="https://github.com/charmi-reddy/prompt-improver" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="github" class="w-5 h-5"></i>
                                 </a>
                             </div>
@@ -339,34 +341,35 @@ const apps = {
                     <div class="project-card group">
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Meeting Summarizer</h3>
-                                <a href="https://github.com/charmi-reddy/meeting-summarizer" class="text-purple-500 hover:text-purple-400 transition-colors">
-                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">SGPA to CGPA Calculator</h3>
+                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
                                 </a>
                             </div>
                             <div class="flex gap-2 mb-4">
-                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">PYTHON</span>
-                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">PROMPT ENGINEERING</span>
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">HTML</span>
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">CSS</span>
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">JAVASCRIPT</span>
                             </div>
                             <ul class="space-y-3 text-purple-300/70">
                                 <li class="flex gap-3">
                                     <span class="text-purple-500 mt-1">•</span>
-                                    <span>Used NLP to convert raw meeting transcripts into clear, structured summaries.</span>
+                                    <span>Built a responsive academic utility used by 200+ students, reducing manual grade calculation time by 95%.</span>
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-purple-500 mt-1">•</span>
-                                    <span>Bridged unstructured human speech with machine understanding for real-world use.</span>
+                                    <span>Implemented client-side validation and edge-case handling, eliminating 90% of common user input errors.</span>
                                 </li>
                             </ul>
                         </div>
-                    </div>                    
+                    </div>
 
                     <div class="project-card group">
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Resume Checker</h3>
-                                <a href="https://github.com/charmi-reddy/Resume-Checker" class="text-purple-500 hover:text-purple-400 transition-colors">
-                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
                                 </a>
                             </div>
                             <div class="flex gap-2 mb-4">
@@ -391,7 +394,7 @@ const apps = {
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">StoryMorph</h3>
-                                <a href="https://github.com/charmi-reddy/Story-Morph" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="github" class="w-5 h-5"></i>
                                 </a>
                             </div>
@@ -412,33 +415,6 @@ const apps = {
                             </ul>
                         </div>
                     </div>
-                    
-                    <div class="project-card group">
-                        <div class="relative z-10">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">SGPA to CGPA Calculator</h3>
-                                <a href="https://sgpa-to-cgpa-calculator.netlify.app/" class="text-purple-500 hover:text-purple-400 transition-colors">
-                                    <i data-lucide="external-link" class="w-5 h-5"></i>
-                                </a>
-                            </div>
-                            <div class="flex gap-2 mb-4">
-                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">HTML</span>
-                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">CSS</span>
-                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">JAVASCRIPT</span>
-                            </div>
-                            <ul class="space-y-3 text-purple-300/70">
-                                <li class="flex gap-3">
-                                    <span class="text-purple-500 mt-1">•</span>
-                                    <span>Built a responsive academic utility used by 200+ students, reducing manual grade calculation time by 95%.</span>
-                                </li>
-                                <li class="flex gap-3">
-                                    <span class="text-purple-500 mt-1">•</span>
-                                    <span>Implemented client-side validation and edge-case handling, eliminating 90% of common user input errors.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
                 </div>
                 
                 ${getNavButtons('projects')}
@@ -459,33 +435,33 @@ const apps = {
                 </header>
 
                 <div class="space-y-4">
-                    <a href="mailto:pcharmireddy@gmail.com" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
+                    <a href="mailto:your.email@example.com" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
                             <i data-lucide="mail" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">Email</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">pcharmireddy@gmail.com</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">your.email@example.com</span>
                     </a>
-                    <a href="https://github.com/charmi-reddy" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
+                    <a href="https://github.com/yourusername" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
                             <i data-lucide="github" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">GitHub</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">github.com/charmi-reddy</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">github.com/yourusername</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
                             <i data-lucide="linkedin" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">LinkedIn</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">linkedin.com/in/charmi-reddy-p-b2aaa2294</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">linkedin.com/in/yourprofile</span>
                     </a>
-                    <a href="https://twitter.com/PCharmiReddy" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
+                    <a href="https://twitter.com/yourusername" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
                             <i data-lucide="twitter" class="text-purple-500 w-6 h-6"></i>
                             <span class="text-white font-medium text-lg">Twitter / X</span>
                         </div>
-                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">@PCharmiReddy</span>
+                        <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">@yourusername</span>
                     </a>
                 </div>
                 
