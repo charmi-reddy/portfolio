@@ -13,8 +13,8 @@ function initNeuralNetwork() {
     canvas.height = window.innerHeight;
     
     const particles = [];
-    const particleCount = 100;
-    const connectionDistance = 180;
+    const particleCount = 120;
+    const connectionDistance = 200;
     
     class Particle {
         constructor() {
@@ -36,9 +36,10 @@ function initNeuralNetwork() {
         draw() {
             // Outer glow
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius + 2, 0, Math.PI * 2);
-            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius + 2);
-            gradient.addColorStop(0, 'rgba(168, 85, 247, 0.8)');
+            ctx.arc(this.x, this.y, this.radius + 3, 0, Math.PI * 2);
+            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius + 3);
+            gradient.addColorStop(0, 'rgba(168, 85, 247, 0.9)');
+            gradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.4)');
             gradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
             ctx.fillStyle = gradient;
             ctx.fill();
@@ -46,7 +47,7 @@ function initNeuralNetwork() {
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fillStyle = '#a855f7';
             ctx.shadowColor = '#a855f7';
-            ctx.shadowBlur = 10;
+            ctx.shadowBlur = 15;
             ctx.fill();
             ctx.shadowBlur = 0;
         }
@@ -64,12 +65,12 @@ function initNeuralNetwork() {
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
                 if (distance < connectionDistance) {
-                    const opacity = (1 - distance / connectionDistance) * 0.6;
+                    const opacity = (1 - distance / connectionDistance) * 0.7;
                     ctx.beginPath();
                     ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
-                    ctx.lineWidth = 1.5;
+                    ctx.lineWidth = 2;
                     ctx.shadowColor = '#a855f7';
-                    ctx.shadowBlur = 5;
+                    ctx.shadowBlur = 8;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
                     ctx.stroke();
