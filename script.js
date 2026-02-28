@@ -112,16 +112,14 @@ function getNavButtons(currentTab) {
     return `
         <div class="flex justify-between items-center pt-12 mt-12 border-t border-purple-900/20">
             ${prevTab ? `
-                <button onclick="openTab('${prevTab}')" class="flex items-center gap-2 px-6 py-3 bg-purple-950/20 border border-purple-900/30 rounded-lg hover:bg-purple-950/40 hover:border-purple-500 transition-all group">
-                    <i data-lucide="chevron-left" class="w-4 h-4 text-purple-500 group-hover:text-purple-400"></i>
-                    <span class="text-purple-300 group-hover:text-white text-sm mono uppercase tracking-wider">Previous</span>
+                <button onclick="openTab('${prevTab}')" class="nav-arrow-btn group">
+                    <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&lt;</span>
                 </button>
             ` : '<div></div>'}
             
             ${nextTab ? `
-                <button onclick="openTab('${nextTab}')" class="flex items-center gap-2 px-6 py-3 bg-purple-950/20 border border-purple-900/30 rounded-lg hover:bg-purple-950/40 hover:border-purple-500 transition-all group">
-                    <span class="text-purple-300 group-hover:text-white text-sm mono uppercase tracking-wider">Next</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-purple-500 group-hover:text-purple-400"></i>
+                <button onclick="openTab('${nextTab}')" class="nav-arrow-btn group">
+                    <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&gt;</span>
                 </button>
             ` : '<div></div>'}
         </div>
