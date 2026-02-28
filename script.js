@@ -110,18 +110,18 @@ function getNavButtons(currentTab) {
     const nextTab = currentIndex < navOrder.length - 1 ? navOrder[currentIndex + 1] : null;
     
     return `
-        <div class="flex justify-between items-center pt-12 mt-12 border-t border-purple-900/20">
+        <div class="fixed-nav-arrows">
             ${prevTab ? `
-                <button onclick="openTab('${prevTab}')" class="nav-arrow-btn group">
+                <button onclick="openTab('${prevTab}')" class="nav-arrow-btn nav-arrow-left group">
                     <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&lt;</span>
                 </button>
-            ` : '<div></div>'}
+            ` : ''}
             
             ${nextTab ? `
-                <button onclick="openTab('${nextTab}')" class="nav-arrow-btn group">
+                <button onclick="openTab('${nextTab}')" class="nav-arrow-btn nav-arrow-right group">
                     <span class="text-3xl text-purple-500 group-hover:text-purple-300 transition-all">&gt;</span>
                 </button>
-            ` : '<div></div>'}
+            ` : ''}
         </div>
     `;
 }
