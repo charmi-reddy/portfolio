@@ -1,11 +1,10 @@
-// State
+
 const state = {
     activeTab: 'home',
     tabs: ['home'],
     isFullscreen: false
 };
 
-// Neural Network Canvas Animation
 function initNeuralNetwork() {
     const canvas = document.getElementById('neuralCanvas');
     const ctx = canvas.getContext('2d');
@@ -43,8 +42,6 @@ function initNeuralNetwork() {
             gradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
             ctx.fillStyle = gradient;
             ctx.fill();
-            
-            // Core particle
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fillStyle = '#a855f7';
@@ -55,7 +52,6 @@ function initNeuralNetwork() {
         }
     }
     
-    // Initialize particles
     for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
     }
@@ -98,14 +94,12 @@ function initNeuralNetwork() {
     
     animate();
     
-    // Resize handler
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     });
 }
 
-// Navigation order
 const navOrder = ['home', 'about', 'techstack', 'projects', 'contact'];
 
 function getNavButtons(currentTab) {
