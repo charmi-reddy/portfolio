@@ -45,6 +45,7 @@ function createDraculaPlayer() {
             autoplay: 0,
             controls: 0,
             rel: 0,
+            start: 20,
             modestbranding: 1,
             playsinline: 1
         },
