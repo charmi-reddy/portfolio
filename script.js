@@ -5,6 +5,91 @@ const state = {
     isFullscreen: false
 };
 
+const draculaSongId = 'HWyzKmXquJk';
+let draculaPlayer = null;
+let isDraculaPlaying = false;
+let isDraculaPlayerReady = false;
+
+function updateMusicButtonUI() {
+    const musicToggle = document.getElementById('musicToggle');
+    if (!musicToggle) return;
+
+    musicToggle.textContent = isDraculaPlaying ? '❚❚' : '♡';
+    musicToggle.classList.toggle('playing', isDraculaPlaying);
+}
+
+function loadYouTubeApi() {
+    if (window.YT && window.YT.Player) return;
+
+    const existingScript = document.querySelector('script[data-youtube-api="true"]');
+    if (existingScript) return;
+
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    tag.dataset.youtubeApi = 'true';
+    document.head.appendChild(tag);
+}
+
+function createDraculaPlayer() {
+    if (draculaPlayer || !(window.YT && window.YT.Player)) return;
+
+    const playerContainer = document.getElementById('youtubePlayerContainer');
+    if (!playerContainer) return;
+
+    playerContainer.innerHTML = '<div id="draculaPlayer"></div>';
+    draculaPlayer = new YT.Player('draculaPlayer', {
+        height: '1',
+        width: '1',
+        videoId: draculaSongId,
+        playerVars: {
+            autoplay: 0,
+            controls: 0,
+            rel: 0,
+            modestbranding: 1,
+            playsinline: 1
+        },
+        events: {
+            onReady: () => {
+                isDraculaPlayerReady = true;
+            },
+            onStateChange: (event) => {
+                isDraculaPlaying = event.data === YT.PlayerState.PLAYING;
+                updateMusicButtonUI();
+            }
+        }
+    });
+}
+
+window.onYouTubeIframeAPIReady = function () {
+    createDraculaPlayer();
+};
+
+function toggleDraculaSong() {
+    if (!draculaPlayer) {
+        createDraculaPlayer();
+    }
+
+    if (!draculaPlayer || !isDraculaPlayerReady) return;
+
+    if (isDraculaPlaying) {
+        draculaPlayer.pauseVideo();
+        isDraculaPlaying = false;
+    } else {
+        draculaPlayer.playVideo();
+        isDraculaPlaying = true;
+    }
+    updateMusicButtonUI();
+}
+
+function initDraculaSongButton() {
+    const musicToggle = document.getElementById('musicToggle');
+    if (!musicToggle) return;
+
+    updateMusicButtonUI();
+    musicToggle.addEventListener('click', toggleDraculaSong);
+    loadYouTubeApi();
+}
+
 function initFallingDots() {
     const canvas = document.getElementById('snowCanvas');
     if (!canvas) return;
@@ -588,6 +673,7 @@ function updateClock() {
 // Init
 document.addEventListener('DOMContentLoaded', () => {
     initFallingDots();
+    initDraculaSongButton();
     renderTabs();
     renderContent();
     setInterval(updateClock, 1000);
