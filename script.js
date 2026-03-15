@@ -5,133 +5,95 @@ const state = {
     isFullscreen: false
 };
 
-function initNeuralNetwork() {
-    const canvas = document.getElementById('neuralCanvas');
+function initFallingDots() {
+    const canvas = document.getElementById('snowCanvas');
+    if (!canvas) return;
+
     const ctx = canvas.getContext('2d');
-    
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    
-    const particles = [];
-    const particleCount = 120;
-    const connectionDistance = 200;
-    
-    // Function to create clipping path that excludes the mac-window area
-    function createClippingPath() {
-        const macWindow = document.querySelector('.mac-window');
-        if (!macWindow) return;
-        
-        const rect = macWindow.getBoundingClientRect();
-        
-        // Create a path that covers the entire canvas except the window area
-        ctx.save();
-        ctx.beginPath();
-        // Outer rectangle (entire canvas)
-        ctx.rect(0, 0, canvas.width, canvas.height);
-        // Inner rectangle (window area) - this creates a "hole"
-        ctx.rect(rect.left, rect.top, rect.width, rect.height);
-        ctx.clip('evenodd'); // Use even-odd rule to create the hole
+    if (!ctx) return;
+
+    const dots = [];
+    const dotCount = 65;
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     }
-    
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.8;
-            this.vy = (Math.random() - 0.5) * 0.8;
-            this.radius = Math.random() * 2.5 + 1.5;
-            
-            // Cache gradients - create once instead of every frame
-            this.glowGradient = ctx.createRadialGradient(0, 0, 0, 0, 0, this.radius + 3);
-            this.glowGradient.addColorStop(0, 'rgba(168, 85, 247, 0.9)');
-            this.glowGradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.4)');
-            this.glowGradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
+
+    class Dot {
+        constructor(resetFromTop = false) {
+            this.reset(resetFromTop);
         }
-        
+
+        reset(fromTop) {
+            this.x = Math.random() * canvas.width;
+            this.y = fromTop ? Math.random() * -canvas.height : Math.random() * canvas.height;
+            this.radius = Math.random() * 1.8 + 1.1;
+            this.vx = (Math.random() - 0.5) * 0.25;
+            this.vy = Math.random() * 1.4 + 0.7;
+            this.alpha = Math.random() * 0.5 + 0.35;
+        }
+
         update() {
             this.x += this.vx;
             this.y += this.vy;
-            
-            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-        }
-        
-        draw() {
-            // Outer glow using cached gradient
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.beginPath();
-            ctx.arc(0, 0, this.radius + 3, 0, Math.PI * 2);
-            ctx.fillStyle = this.glowGradient;
-            ctx.fill();
-            ctx.restore();
-            
-            // Inner particle
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.beginPath();
-            ctx.arc(0, 0, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = '#a855f7';
-            ctx.shadowColor = '#a855f7';
-            ctx.shadowBlur = 15;
-            ctx.fill();
-            ctx.shadowBlur = 0;
-            ctx.restore();
-        }
-    }
-    
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
-    
-    function drawConnections() {
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < connectionDistance) {
-                    const opacity = (1 - distance / connectionDistance) * 0.7;
-                    ctx.beginPath();
-                    ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
-                    ctx.lineWidth = 2;
-                    ctx.shadowColor = '#a855f7';
-                    ctx.shadowBlur = 8;
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.stroke();
-                    ctx.shadowBlur = 0;
-                }
+
+            if (this.y > canvas.height + 8) {
+                this.reset(true);
+                this.y = -8;
             }
+
+            if (this.x < -8) this.x = canvas.width + 8;
+            if (this.x > canvas.width + 8) this.x = -8;
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(168, 85, 247, ${this.alpha})`;
+            ctx.shadowColor = '#a855f7';
+            ctx.shadowBlur = 6;
+            ctx.fill();
         }
     }
-    
+
+    function createClippingPath() {
+        const macWindow = document.querySelector('.mac-window');
+        if (!macWindow) return false;
+
+        const rect = macWindow.getBoundingClientRect();
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(0, 0, canvas.width, canvas.height);
+        ctx.rect(rect.left, rect.top, rect.width, rect.height);
+        ctx.clip('evenodd');
+        return true;
+    }
+
+    resizeCanvas();
+    for (let i = 0; i < dotCount; i++) {
+        dots.push(new Dot(false));
+    }
+
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        // Apply clipping path to exclude window area
-        createClippingPath();
-        
-        particles.forEach(particle => {
-            particle.update();
-            particle.draw();
+
+        const didClip = createClippingPath();
+        dots.forEach(dot => {
+            dot.update();
+            dot.draw();
         });
-        
-        drawConnections();
-        
-        // Restore context to remove clipping
-        ctx.restore();
-        
+
+        if (didClip) {
+            ctx.restore();
+        }
+
+        ctx.shadowBlur = 0;
         requestAnimationFrame(animate);
     }
-    
+
     animate();
-    
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
+    window.addEventListener('resize', resizeCanvas);
 }
 
 // Navigation order
@@ -625,7 +587,7 @@ function updateClock() {
 
 // Init
 document.addEventListener('DOMContentLoaded', () => {
-    initNeuralNetwork();
+    initFallingDots();
     renderTabs();
     renderContent();
     setInterval(updateClock, 1000);
