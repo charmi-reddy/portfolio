@@ -397,7 +397,7 @@ const apps = {
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Prompt Improver</h3>
-                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <a href="https://github.com/charmi-reddy/prompt-improver" target="_blank" rel="noopener noreferrer" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="github" class="w-5 h-5"></i>
                                 </a>
                             </div>
@@ -447,6 +447,31 @@ const apps = {
                     <div class="project-card group">
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">StarMail</h3>
+                                <a href="https://github.com/charmi-reddy/StarMail" target="_blank" rel="noopener noreferrer" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">WEB APP</span>
+                                <span class="text-[10px] mono text-purple-700 bg-purple-950/40 px-3 py-1 rounded-full">UI/UX</span>
+                            </div>
+                            <ul class="space-y-3 text-purple-300/70">
+                                <li class="flex gap-3">
+                                    <span class="text-purple-500 mt-1">&bull;</span>
+                                    <span>Built a communication-focused project centered on a clean, polished mail experience.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-purple-500 mt-1">&bull;</span>
+                                    <span>Designed the interface around simple navigation and an intuitive workflow for everyday use.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card group">
+                        <div class="relative z-10">
+                            <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Resume Checker</h3>
                                 <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="external-link" class="w-5 h-5"></i>
@@ -473,8 +498,8 @@ const apps = {
                     <div class="project-card group">
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">StoryMorph</h3>
-                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Story Morph</h3>
+                                <a href="https://github.com/charmi-reddy/Story-Morph" target="_blank" rel="noopener noreferrer" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="github" class="w-5 h-5"></i>
                                 </a>
                             </div>
