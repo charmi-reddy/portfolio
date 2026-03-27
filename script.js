@@ -422,7 +422,7 @@ const apps = {
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">SGPA to CGPA Calculator</h3>
-                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <a href="https://sgpa-to-cgpa-calculator.netlify.app/" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="external-link" class="w-5 h-5"></i>
                                 </a>
                             </div>
@@ -449,7 +449,7 @@ const apps = {
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">StarMail</h3>
                                 <a href="https://github.com/charmi-reddy/StarMail" target="_blank" rel="noopener noreferrer" class="text-purple-500 hover:text-purple-400 transition-colors">
-                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
                                 </a>
                             </div>
                             <div class="flex gap-2 mb-4">
@@ -473,7 +473,7 @@ const apps = {
                         <div class="relative z-10">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Resume Checker</h3>
-                                <a href="#" class="text-purple-500 hover:text-purple-400 transition-colors">
+                                <a href="https://resume-checker-6996.streamlit.app/" class="text-purple-500 hover:text-purple-400 transition-colors">
                                     <i data-lucide="external-link" class="w-5 h-5"></i>
                                 </a>
                             </div>
@@ -500,7 +500,7 @@ const apps = {
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">Story Morph</h3>
                                 <a href="https://github.com/charmi-reddy/Story-Morph" target="_blank" rel="noopener noreferrer" class="text-purple-500 hover:text-purple-400 transition-colors">
-                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                    <i data-lucide="external-link" class="w-5 h-5"></i>
                                 </a>
                             </div>
                             <div class="flex gap-2 mb-4">
