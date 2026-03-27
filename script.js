@@ -550,21 +550,27 @@ const apps = {
                     </a>
                     <a href="https://github.com/charmi-reddy" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
-                            <i data-lucide="github" class="text-purple-500 w-6 h-6"></i>
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="text-purple-500 w-6 h-6" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.866-.013-1.699-2.782.605-3.369-1.344-3.369-1.344-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.58 9.58 0 0 1 2.504.337c1.909-1.295 2.748-1.026 2.748-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .269.18.58.688.481A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"/>
+                            </svg>
                             <span class="text-white font-medium text-lg">GitHub</span>
                         </div>
                         <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">charmi-reddy</span>
                     </a>
                     <a href="https://www.linkedin.com/in/charmi-reddy-p-b2aaa2294" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
-                            <i data-lucide="linkedin" class="text-purple-500 w-6 h-6"></i>
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="text-purple-500 w-6 h-6" fill="currentColor">
+                                <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14Zm-.354 15.5v-5.3c0-2.839-1.514-4.159-3.534-4.159-1.628 0-2.357.896-2.765 1.525v-1.307H9.56c.036.866 0 9.241 0 9.241h2.787v-5.16c0-.276.02-.551.102-.748.223-.55.732-1.12 1.585-1.12 1.119 0 1.566.845 1.566 2.083v4.945h3.046ZM6.626 8.014c.972 0 1.577-.644 1.577-1.45-.018-.824-.605-1.45-1.559-1.45-.955 0-1.578.626-1.578 1.45 0 .806.605 1.45 1.541 1.45h.019ZM8.02 18.5V9.259H5.233V18.5H8.02Z"/>
+                            </svg>
                             <span class="text-white font-medium text-lg">LinkedIn</span>
                         </div>
                         <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">charmi-reddy-p-b2aaa2294</span>
                     </a>
                     <a href="https://twitter.com/PCharmiReddy" target="_blank" class="flex items-center justify-between p-8 border border-purple-900/10 bg-purple-950/5 hover:border-purple-500/30 rounded-xl transition-all group">
                         <div class="flex items-center gap-4">
-                            <i data-lucide="twitter" class="text-purple-500 w-6 h-6"></i>
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="text-purple-500 w-6 h-6" fill="currentColor">
+                                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.637 7.584H.477l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932Zm-1.291 19.492h2.04L6.486 3.24H4.298L17.61 20.645Z"/>
+                            </svg>
                             <span class="text-white font-medium text-lg">Twitter / X</span>
                         </div>
                         <span class="text-purple-700 group-hover:text-purple-400 mono text-sm transition-colors">@PCharmiReddy</span>
