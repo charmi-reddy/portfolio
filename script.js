@@ -336,44 +336,109 @@ const apps = {
                     <div class="h-px w-full bg-purple-900/20"></div>
                 </header>
 
-                <div class="space-y-12">
-                    <div class="space-y-6">
-                        <h3 class="text-xl text-purple-400 font-medium mono uppercase tracking-wider">Languages</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Programming Languages</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="tech-tag mono text-white">HTML</span>
-                            <span class="tech-tag mono text-white">CSS</span>
-                            <span class="tech-tag mono text-white">JavaScript</span>
                             <span class="tech-tag mono text-white">Python</span>
                             <span class="tech-tag mono text-white">Java</span>
                             <span class="tech-tag mono text-white">C</span>
                             <span class="tech-tag mono text-white">C++</span>
+                            <span class="tech-tag mono text-white">JavaScript</span>
                         </div>
                     </div>
 
-                    <div class="space-y-6">
-                        <h3 class="text-xl text-purple-400 font-medium mono uppercase tracking-wider">Libraries / Frameworks</h3>
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Frontend Development</h3>
                         <div class="flex flex-wrap gap-3">
-                            <span class="tech-tag mono text-white">NumPy</span>
-                            <span class="tech-tag mono text-white">Pandas</span>
-                            <span class="tech-tag mono text-white">Matplotlib</span>
+                            <span class="tech-tag mono text-white">HTML</span>
+                            <span class="tech-tag mono text-white">CSS</span>
+                            <span class="tech-tag mono text-white">JavaScript</span>
                             <span class="tech-tag mono text-white">Tailwind CSS</span>
-                            <span class="tech-tag mono text-white">Flask</span>
-                            <span class="tech-tag mono text-white">Streamlit</span>
                         </div>
                     </div>
 
-                    <div class="space-y-6">
-                        <h3 class="text-xl text-purple-400 font-medium mono uppercase tracking-wider">Tools & Platforms</h3>
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Backend Development</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">Python</span>
+                            <span class="tech-tag mono text-white">Flask</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Data Analysis</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">Python</span>
+                            <span class="tech-tag mono text-white">Pandas</span>
+                            <span class="tech-tag mono text-white">NumPy</span>
+                            <span class="tech-tag mono text-white">SAP Analytics Cloud</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Data Visualization & Reporting</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">Matplotlib</span>
+                            <span class="tech-tag mono text-white">Streamlit</span>
+                            <span class="tech-tag mono text-white">SAP Analytics Cloud</span>
+                            <span class="tech-tag mono text-white">Stories</span>
+                            <span class="tech-tag mono text-white">Dashboards</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">SAP & Analytics Tools</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">SAP Analytics Cloud</span>
+                            <span class="tech-tag mono text-white">Data Modeling</span>
+                            <span class="tech-tag mono text-white">Planning</span>
+                            <span class="tech-tag mono text-white">Story Design</span>
+                            <span class="tech-tag mono text-white">SAP Certified</span>
+                            <span class="tech-tag mono text-white">Data Analyst</span>
+                        </div>
+                        <p class="text-sm text-purple-300/70 leading-relaxed">
+                            SAP Certified - Data Analyst - SAP Analytics Cloud
+                        </p>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Databases</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Tools & Platforms</h3>
                         <div class="flex flex-wrap gap-3">
                             <span class="tech-tag mono text-white">Git</span>
                             <span class="tech-tag mono text-white">GitHub</span>
-                            <span class="tech-tag mono text-white">MySQL</span>
-                            <span class="tech-tag mono text-white">APIs</span>
                             <span class="tech-tag mono text-white">Google Colab</span>
-                            <span class="tech-tag mono text-white">Docker</span>
-                            <span class="tech-tag mono text-white">n8n</span>
                             <span class="tech-tag mono text-white">Jupyter Notebook</span>
                             <span class="tech-tag mono text-white">Vercel</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">APIs & Integration</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">REST APIs</span>
+                            <span class="tech-tag mono text-white">Data Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">Automation / Workflow Tools</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">n8n</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 p-6 bg-purple-950/20 border border-purple-900/20 rounded-2xl">
+                        <h3 class="text-xl text-purple-400 font-medium">DevOps / Environment</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag mono text-white">Docker</span>
                         </div>
                     </div>
                 </div>
